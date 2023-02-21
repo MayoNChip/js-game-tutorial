@@ -20,6 +20,7 @@ export default class GameObject {
       gameObject: this,
       src: config.src || "/src/assets/images/characters/people/hero.png",
     });
+    this.direction = "up";
   }
 
   update(state: { arrow: "up" | "down" | "left" | "right" }) {}

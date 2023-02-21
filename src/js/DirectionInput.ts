@@ -23,6 +23,7 @@ export default class DirectionInput {
   Init() {
     document.addEventListener("keydown", (e: KeyboardEvent) => {
       const dir = this.map[e.code];
+      //   console.log(e.code);
       const index = this.heldDirections.indexOf(dir);
       if (dir && index === -1) {
         this.heldDirections.unshift(dir);

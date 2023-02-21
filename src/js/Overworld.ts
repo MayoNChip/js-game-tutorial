@@ -19,7 +19,7 @@ export default class Overworld {
   }
 
   setup() {
-    this.map = new OverworldMap(OverworldMaps.Kitchen);
+    this.map = new OverworldMap(OverworldMaps.DemoRoom);
     this.directionInput = new DirectionInput();
     this.directionInput.Init();
   }

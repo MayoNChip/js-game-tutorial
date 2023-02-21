@@ -7,16 +7,16 @@ export const OverworldMaps = {
     lowerSrc: "/src/assets/images/maps/DemoLower.png",
     upperSrc: "/src/assets/images/maps/DemoUpper.png",
     gameObjects: {
-      hero: new GameObject({
+      hero: new Person({
         isPlayerControlled: true,
         x: utils.withGrid(5),
         y: utils.withGrid(6),
       }),
-      npc1: new GameObject({
-        x: utils.withGrid(7),
-        y: utils.withGrid(8),
-        src: "/src/assets/images/characters/people/npc1.png",
-      }),
+      //   npc1: new GameObject({
+      //     x: utils.withGrid(7),
+      //     y: utils.withGrid(8),
+      //     src: "/src/assets/images/characters/people/npc1.png",
+      //   }),
     },
   },
   Kitchen: {

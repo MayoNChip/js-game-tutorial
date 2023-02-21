@@ -23,6 +23,7 @@ export default class Person extends GameObject {
 
   update(state: { arrow: "down" | "up" | "right" | "left" }) {
     this.updatePosition();
+    this.updateSprite(state);
     if (
       this.isPlayerControlled &&
       this.movingProgressRemaining === 0 &&
@@ -38,6 +39,21 @@ export default class Person extends GameObject {
       const [property, change] = this.directionUpdate[this.direction];
       this[property] += change;
       this.movingProgressRemaining -= 1;
+    }
+  }
+
+  updateSprite(state: { arrow: "down" | "up" | "right" | "left" }) {
+    if (
+      this.isPlayerControlled &&
+      this.movingProgressRemaining === 0 &&
+      !state.arrow
+    ) {
+      this.sprite.setAnimation(`idle-${this.direction}`);
+      return;
+    }
+
+    if (this.movingProgressRemaining > 0) {
+      this.sprite.setAnimation(`walk-${this.direction}`);
     }
   }
 }
